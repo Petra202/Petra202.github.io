@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Random App Idea</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scake=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+<div class="wrapper">
+	<header>PROFESSION</header>
+		<div class="content">
+			<br>
+			<div class="profession-area">
+			  <p class="profession">
+				<input name="randomProf" id="randomProf">
+			  </p>	
+		  </div>
+		</div>
+	<br>
+	<header>LOCATION</header>
+	<br>
+	<div class="content">
+			<div class="location-area">
+			  <p class="location">
+				<input name="randomLoc" id="randomLoc">
+			  </p>	
+		  </div>
+		</div>
+		<div class="buttons">
+			<div class="features">
+				<button type="randomList" onClick="randomList()">Feeling Lucky?</button>				
+		    </div>				   
+	    </div>
+</div>
+	
+<script>
+		var prof = Array("Baker","Pilot","Nurse","Paramedic","Salesman","Diver","Librarian","Detective","Reporter","Footbaler","Electrician");
+		var loc = Array("Garage","Restaurant","Studio","Apartment Building","Warehouse","Bridge","Gym","Bar","Shelter","Freezer","Attic");
+	
+		function randomList(){
+			var randomProf = prof[Math.floor(Math.random()*prof.length)];
+			document.getElementById('randomProf').value = randomProf;
+			var randomLoc = loc[Math.floor(Math.random()*loc.length)];
+			document.getElementById('randomLoc').value = randomLoc;
+		}
+	
+	</script>
+</body>
+</html>
